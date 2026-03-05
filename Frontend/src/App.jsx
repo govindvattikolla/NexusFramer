@@ -3,13 +3,14 @@ import Header from "./components/Header"
 
 import Home from "./pages/Home"
 import About from "./pages/About"
-import AboutFounder from "./pages/AboutFounder"
+
 import ContactUS from "./pages/ContactUS"
 import Gallery from "./pages/Gallery"
 import IndustriesServed from "./pages/Industriesserved"
 import Programs from "./pages/Programs"
 import Services from "./pages/Services"
 import Footer from "./components/Footer"
+import Whoweserve from "./pages/Whoweserve"
 
 export default function App() {
   return (
@@ -19,7 +20,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/aboutfounder" element={<AboutFounder />} />
+        <Route path="/whoweserve" element={<Whoweserve/>} />
         <Route path="/contactus" element={<ContactUS />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/industriesserved" element={<IndustriesServed />} />

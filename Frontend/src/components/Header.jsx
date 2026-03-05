@@ -21,7 +21,7 @@ const Header = () => {
           <Link to="/about"
             className="relative inline-block after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-[#DE080A] after:transition-all after:duration-300 hover:after:w-full"
           > About Us  </Link>
-          <Link to="/aboutfounder"
+          <Link to="/whoweserve"
             className="relative inline-block after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-[#DE080A] after:transition-all after:duration-300 hover:after:w-full"
           > Who We Serve </Link>
             <Link to="/programs"
@@ -62,7 +62,7 @@ const Header = () => {
         <div className="md:hidden bg-[#DE080A] text-white flex flex-col space-y-4 px-6 py-4 font-medium">
           <Link to="/" onClick={() => setIsOpen(false)}>Home</Link>
           <Link to="/about" onClick={() => setIsOpen(false)}>About</Link>
-          <Link to="/aboutfounder" onClick={() => setIsOpen(false)}>About Founder</Link>
+          <Link to="/whoweserve" onClick={() => setIsOpen(false)}>Who we Serve</Link>
           <Link to="/contactus" onClick={() => setIsOpen(false)}>Contact</Link>
           <Link to="/gallery" onClick={() => setIsOpen(false)}>Gallery</Link>
           <Link to="/industriesserved" onClick={() => setIsOpen(false)}>Industries</Link>
