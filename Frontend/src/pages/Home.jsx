@@ -8,6 +8,8 @@ const colors = {
   orange: "#FF6700",
   maroon: "#870000",
   darkGreen: "#1a4a1a",
+  black: "#000",
+  white : "#FFF"
 };
 
 const NAV_LINKS = ["About", "Services", "Programs", "Trainers", "Books", "Contact"];
@@ -84,7 +86,7 @@ export default function NexusframerHome() {
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lato:wght@300;400;700&display=swap');
         * { box-sizing: border-box; }
         body { margin: 0; }
-        .font-display { font-family: 'Playfair Display', serif; }
+        .font-display { font-family: 'Montserrat', sans-serif; }
         .font-body { font-family: 'Lato', sans-serif; }
         .stripe-bg {
           background: repeating-linear-gradient(
@@ -117,60 +119,7 @@ export default function NexusframerHome() {
 
      
 
-      {/* HERO */}
-      <section style={{ minHeight: "100vh", position: "relative", display: "flex", alignItems: "center", overflow: "hidden" }}>
-        <div className="hero-gradient" style={{ position: "absolute", inset: 0 }} />
-        <div className="stripe-bg" style={{ position: "absolute", inset: 0 }} />
-
-        {/* Decorative circles */}
-        <div style={{ position: "absolute", top: "10%", right: "8%", width: 320, height: 320, borderRadius: "50%", border: "2px solid rgba(255,216,1,0.2)", opacity: 0.5 }} />
-        <div style={{ position: "absolute", top: "18%", right: "14%", width: 180, height: 180, borderRadius: "50%", border: "2px solid rgba(255,216,1,0.3)", opacity: 0.4 }} />
-        <div style={{ position: "absolute", bottom: "15%", left: "5%", width: 200, height: 200, borderRadius: "50%", background: "rgba(0,100,0,0.15)" }} />
-
-        <div style={{ maxWidth: 1280, margin: "0 auto", padding: "120px 24px 80px", position: "relative", zIndex: 2, width: "100%" }}>
-          <div style={{ maxWidth: 750 }}>
-            <div className="font-body" style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "rgba(255,216,1,0.15)", border: "1px solid rgba(255,216,1,0.4)", borderRadius: 20, padding: "6px 16px", marginBottom: 28 }}>
-              <span style={{ width: 6, height: 6, borderRadius: "50%", background: colors.yellow, display: "inline-block" }} />
-              <span style={{ color: colors.yellow, fontSize: 12, fontWeight: 700, letterSpacing: "1.5px", textTransform: "uppercase" }}>Premium Corporate Training</span>
-            </div>
-
-            <h1 className="font-display" style={{ fontSize: "clamp(42px, 7vw, 80px)", fontWeight: 900, color: "white", lineHeight: 1.08, marginBottom: 24, letterSpacing: "-2px" }}>
-              Transforming Human<br />
-              <span className="gold-text">Potential</span> into<br />
-              Workplace Performance
-            </h1>
-
-            <p className="font-body" style={{ fontSize: "clamp(16px, 2vw, 19px)", color: "rgba(255,255,255,0.85)", lineHeight: 1.75, marginBottom: 40, maxWidth: 580, fontWeight: 300 }}>
-              People-first. Performance-driven. Future-ready. We design psychology-backed, high-impact learning experiences that transform how professionals think, communicate, collaborate, and lead.
-            </p>
-
-            <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
-              <a href="#services" className="btn-primary font-body" style={{ background: colors.yellow, color: colors.maroon, padding: "16px 36px", borderRadius: 4, fontWeight: 700, fontSize: 15, textDecoration: "none", letterSpacing: "0.5px" }}>
-                Explore Programs →
-              </a>
-              <a href="#contact" className="btn-secondary font-body" style={{ background: "transparent", color: "white", padding: "16px 36px", borderRadius: 4, fontWeight: 600, fontSize: 15, textDecoration: "none", border: "2px solid rgba(255,255,255,0.5)", letterSpacing: "0.5px" }}>
-                Book a Consultation
-              </a>
-            </div>
-
-            {/* Stats */}
-            <div style={{ display: "flex", gap: 40, marginTop: 60, flexWrap: "wrap" }}>
-              {[["1000+", "Professionals Trained"], ["20+", "Industries Served"], ["100%", "Customized Programs"]].map(([num, label]) => (
-                <div key={label}>
-                  <div className="font-display" style={{ fontSize: 36, fontWeight: 900, color: colors.yellow, lineHeight: 1 }}>{num}</div>
-                  <div className="font-body" style={{ fontSize: 13, color: "rgba(255,255,255,0.7)", marginTop: 4, letterSpacing: "0.5px" }}>{label}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Scroll indicator */}
-        <div style={{ position: "absolute", bottom: 32, left: "50%", transform: "translateX(-50%)", display: "flex", flexDirection: "column", alignItems: "center", gap: 8 }}>
-          <div className="font-body" style={{ color: "rgba(255,255,255,0.5)", fontSize: 11, letterSpacing: "2px", textTransform: "uppercase" }}>Scroll</div>
-          <div style={{ width: 1, height: 40, background: "linear-gradient(to bottom, rgba(255,216,1,0.7), transparent)" }} />
-        </div>
-      </section>
+      
 
       {/* MARQUEE - Industries */}
       <div style={{ background: colors.maroon, padding: "14px 0", overflow: "hidden" }}>
@@ -235,21 +184,21 @@ export default function NexusframerHome() {
                 icon: "🔭",
                 color: colors.maroon,
                 bg: `linear-gradient(135deg, ${colors.maroon}, #b00000)`,
-                text: "To be recognized as a leading corporate training ecosystem shaping the future of workplace learning—where communication is clear, teams collaborate with trust, leaders inspire with authenticity, and performance is sustainable.",
+                text: "To build bridges between schools, colleges, and the real world by equipping individuals with the skills required to succeed in industries, workplaces, and entrepreneurial journeys.",
               },
               {
                 label: "Mission",
                 icon: "🚀",
                 color: colors.green,
                 bg: `linear-gradient(135deg, ${colors.green}, #004000)`,
-                text: "To empower individuals and teams with actionable skills, modern mindsets, and transformative learning experiences. We strengthen communication, build emotionally intelligent teams, and bridge the gap between potential and performance.",
+                text: "To empower individuals and institutions with practical skills, modern mindsets, and transformative learning experiences that prepare them for real-world success.",
               }
             ].map(({ label, icon, bg, text }) => (
               <AnimatedSection key={label}>
                 <div className="card-hover" style={{ background: bg, borderRadius: 16, padding: "44px 36px", color: "white", minHeight: 280 }}>
                   <div style={{ fontSize: 40, marginBottom: 16 }}>{icon}</div>
                   <div className="font-display" style={{ fontSize: 28, fontWeight: 900, marginBottom: 16, color: colors.yellow }}>{label}</div>
-                  <p className="font-body" style={{ fontSize: 15, lineHeight: 1.8, color: "rgba(255,255,255,0.85)" }}>{text}</p>
+                  <p className="font-body" style={{ fontSize: 18, lineHeight: 1.8, color: "rgba(255,255,255,0.85)" }}>{text}</p>
                 </div>
               </AnimatedSection>
             ))}
@@ -335,7 +284,7 @@ export default function NexusframerHome() {
             </div>
 
             <div style={{ position: "relative" }}>
-              <div style={{ background: `linear-gradient(135deg, ${colors.red}, ${colors.maroon})`, borderRadius: 20, padding: 40, color: "white" }}>
+              <div style={{ background: `linear-gradient(135deg, ${colors.green}, ${colors.green})`, borderRadius: 20, padding: 40, color: "white" }}>
                 <div style={{ fontSize: 60, textAlign: "center", marginBottom: 16 }}>👩‍💼</div>
                 <div className="font-display" style={{ fontSize: 22, fontWeight: 700, textAlign: "center", marginBottom: 8 }}>Sri Aalekhya Puja</div>
                 <div className="font-body" style={{ fontSize: 13, color: "rgba(255,255,255,0.7)", textAlign: "center", marginBottom: 32 }}>Transformation Expert</div>
@@ -410,7 +359,7 @@ export default function NexusframerHome() {
               subtitle: "Where Presence, Emotion & Influence Converge",
               desc: "Explores how emotional intelligence, authenticity, and conscious communication come together to create powerful professional presence and influence without manipulation.",
               tags: ["Charismatic Communication", "EQ Leadership", "Relationship Mastery"],
-              color: colors.green,
+              color: colors.white,
               bg: `linear-gradient(135deg, ${colors.green}15, #004000 10%)`,
             }
           ].map(({ title, subtitle, desc, tags, color, bg }) => (
@@ -419,13 +368,13 @@ export default function NexusframerHome() {
                 <div style={{ fontSize: 56, marginBottom: 20 }}>📘</div>
                 <h3 className="font-display" style={{ fontSize: 26, fontWeight: 900, color, marginBottom: 8, letterSpacing: "-0.5px" }}>{title}</h3>
                 <div className="font-body" style={{ fontSize: 14, fontWeight: 600, color: colors.orange, marginBottom: 20, fontStyle: "italic" }}>{subtitle}</div>
-                <p className="font-body" style={{ fontSize: 15, color: colors.darkGreen, lineHeight: 1.8, marginBottom: 24 }}>{desc}</p>
+                <p className="font-body" style={{ fontSize: 15, color: color, lineHeight: 1.8, marginBottom: 24 }}>{desc}</p>
                 <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginBottom: 28 }}>
                   {tags.map(t => (
                     <span key={t} className="font-body" style={{ background: `${color}15`, color, padding: "5px 12px", borderRadius: 20, fontSize: 12, fontWeight: 700, border: `1px solid ${color}30` }}>{t}</span>
                   ))}
                 </div>
-                <a href="#contact" className="btn-primary font-body" style={{ display: "inline-block", background: color, color: "white", padding: "12px 28px", borderRadius: 4, fontWeight: 700, fontSize: 14, textDecoration: "none" }}>Buy Now →</a>
+                <a href="#contact" className="btn-primary font-body" style={{ display: "inline-block", background: "green", color: "white", padding: "12px 28px", borderRadius: 4, fontWeight: 700, fontSize: 14, textDecoration: "none" }}>Buy Now →</a>
               </div>
             </AnimatedSection>
           ))}

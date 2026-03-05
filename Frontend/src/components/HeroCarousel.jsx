@@ -12,7 +12,7 @@ const slides = [
     content: (
       <div className="flex flex-col items-center text-center px-4">
         <span
-          className="uppercase tracking-[0.3em] text-sm font-medium mb-4 text-amber-300"
+          className="uppercase tracking-[0.3em] text-sm font-medium mb-4 text-amber-400"
           style={{ fontFamily: "'DM Sans', sans-serif" }}
         >
           Your potential, unleashed
@@ -25,7 +25,7 @@ const slides = [
           <span
             className="italic"
             style={{
-              WebkitTextStroke: "2px #f59e0b",
+              WebkitTextStroke: "2px #f50b0b",
               color: "transparent",
             }}
           >
@@ -38,7 +38,7 @@ const slides = [
           className="group inline-flex items-center gap-3 border border-white/60 text-white px-8 py-4 text-sm uppercase tracking-widest font-semibold hover:bg-white hover:text-black transition-all duration-300"
           style={{ fontFamily: "'DM Sans', sans-serif" }}
         >
-          Read More
+          Explore Programs
           <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
             →
           </span>
@@ -73,12 +73,10 @@ const slides = [
           </span>
         </h1>
         <p
-          className="text-white/70 text-base md:text-lg max-w-xl mb-8 leading-relaxed"
+          className="text-white/70 text-base md:text-lg max-w-2xl mb-8 leading-relaxed"
           style={{ fontFamily: "'DM Sans', sans-serif" }}
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim
-          ad minim veniam quis nostrud.
+          Nexus Framer equips students, professionals, entrepreneurs, and institutions with the skills needed to thrive in the real world through structured, research-backed training programs delivered both online and offline.
         </p>
         <a
           href="#"
