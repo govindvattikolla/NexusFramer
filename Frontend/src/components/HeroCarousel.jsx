@@ -12,26 +12,26 @@ const slides = [
     content: (
       <div className="flex flex-col items-center text-center px-4">
         <span
-          className="uppercase tracking-[0.3em] text-sm font-medium mb-4 text-amber-400"
-          style={{ fontFamily: "'DM Sans', sans-serif" }}
+          className=" text-3xl md:text-5xl font-black mb-4 text-[#f50b0b]"
+          style={{ fontFamily: "'Playfair Display', sans-serif" }}
         >
-          Your potential, unleashed
+         Skills for Every Stage of Success
         </span>
         <h1
-          className="text-5xl md:text-7xl lg:text-8xl font-black text-white leading-none mb-8 max-w-4xl"
+          className="text-3xl md:text-6xl font-black text-white leading-none mb-8 max-w-4xl"
           style={{ fontFamily: "'Playfair Display', serif" }}
         >
-          Help You{" "}
+          Your Life Cycle  Skill Partner{" "}
           <span
             className="italic"
             style={{
-              WebkitTextStroke: "2px #f50b0b",
+              WebkitTextStroke: "2px #064718",
               color: "transparent",
             }}
           >
-            Achieve
+          
           </span>{" "}
-          Anything
+        
         </h1>
         <a
           href="#"
@@ -83,7 +83,7 @@ const slides = [
           className="group inline-flex items-center gap-3 bg-emerald-500 hover:bg-emerald-400 text-white px-8 py-4 text-sm uppercase tracking-widest font-semibold transition-all duration-300"
           style={{ fontFamily: "'DM Sans', sans-serif" }}
         >
-          Join Us
+          Partner With Us
           <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
             →
           </span>

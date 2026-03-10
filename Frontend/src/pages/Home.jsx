@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import HeroSection from "../components/HeroCarousel";
+import NexusSection from "../components/whatwedo";
 
 const colors = {
   red: "#DE080A",
@@ -9,7 +10,11 @@ const colors = {
   maroon: "#870000",
   darkGreen: "#1a4a1a",
   black: "#000",
-  white : "#FFF"
+  white : "#FFF",
+  offWhite: "#F6F6F6",
+  textDark: "#1A1A1A",
+  textMid: "#444444",
+  textLight: "#666666",
 };
 
 const NAV_LINKS = ["About", "Services", "Programs", "Trainers", "Books", "Contact"];
@@ -48,6 +53,13 @@ const INDUSTRIES = [
   "Logistics & Supply Chain", "Automobile", "Energy & Utilities", "NGOs & Social Impact"
 ];
 
+const Soulhear = [
+  {title: "Emotional Clarity", icon:"🎯"},
+  {title: "Calm Confidence", icon: "🧘"},
+  {title: "Authentic Presence", icon: "✨"},
+  {title: "Deeper Connection",icon: "🤝" }
+]
+
 function useInView(threshold = 0.15) {
   const ref = useRef(null);
   const [inView, setInView] = useState(false);
@@ -68,6 +80,8 @@ function AnimatedSection({ children, className = "" }) {
   );
 }
 
+
+
 export default function NexusframerHome() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -77,6 +91,91 @@ export default function NexusframerHome() {
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  const segments = [
+  {
+    id: "assess",
+    label: "Assess Stage",
+    icon: "🔍",
+    tagline: "Understand the Starting Point",
+    description:
+      "Evaluate current capabilities, behaviors, and performance levels to clearly understand the existing skill landscape.",
+    color: colors.red,
+    accent: "#FF4D4F",
+  },
+  {
+    id: "skill-gap",
+    label: "Identify Skill Gap",
+    icon: "🧠",
+    tagline: "Discover What Needs Improvement",
+    description:
+      "Analyze insights from assessments to uncover strengths and identify the critical skills that need development.",
+    color: colors.orange,
+    accent: "#FF8C40",
+  },
+  {
+    id: "framework",
+    label: "Design Framework",
+    icon: "🧩",
+    tagline: "Create a Strategic Learning Plan",
+    description:
+      "Develop a structured and customized learning framework designed to close identified skill gaps effectively.",
+    color: colors.green,
+    accent: "#2E8B57",
+  },
+  {
+    id: "training",
+    label: "Deliver Training",
+    icon: "🎯",
+    tagline: "Turn Learning Into Action",
+    description:
+      "Execute targeted training programs, workshops, and practical learning experiences that drive real transformation.",
+    color: colors.maroon,
+    accent: "#B22222",
+  },
+  {
+    id: "growth",
+    label: "Measure Growth",
+    icon: "📈",
+    tagline: "Track Progress and Impact",
+    description:
+      "Measure outcomes, monitor improvement, and evaluate how training translates into performance growth.",
+    color: colors.red,
+    accent: "#D4A800",
+  },
+];
+
+const FadeUp = ({ children, delay = 0 }) => {
+  const [ref, inView] = useInView();
+  return (
+    <div
+      ref={ref}
+      style={{
+        opacity: inView ? 1 : 0,
+        transform: inView ? "translateY(0px)" : "translateY(36px)",
+        transition: `opacity 0.75s ease ${delay}s, transform 0.75s ease ${delay}s`,
+      }}
+    >
+      {children}
+    </div>
+  );
+};
+
+const FadeLeft = ({ children, delay = 0 }) => {
+  const [ref, inView] = useInView();
+  return (
+    <div
+      ref={ref}
+      style={{
+        opacity: inView ? 1 : 0,
+        transform: inView ? "translateX(0px)" : "translateX(-40px)",
+        transition: `opacity 0.75s ease ${delay}s, transform 0.75s ease ${delay}s`,
+      }}
+    >
+      {children}
+    </div>
+  );
+};
 
   return (
     <div style={{ fontFamily: "'Georgia', 'Times New Roman', serif", background: "#faf8f4", color: colors.darkGreen }}>
@@ -113,7 +212,7 @@ export default function NexusframerHome() {
         .section-rule { height: 4px; background: linear-gradient(90deg, #DE080A, #FFD801, #006400, #FF6700); border-radius: 2px; }
         .program-pill { transition: all 0.3s ease; cursor: default; }
         .program-pill:hover { background: #DE080A; color: white; transform: scale(1.04); }
-        .soulhear-bg { background: linear-gradient(135deg, #006400 0%, #1a4a1a 50%, #870000 100%); }
+        .soulhear-bg { background: #008743 }
         .gold-text { background: linear-gradient(135deg, #FFD801, #FF6700); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
       `}</style>
 
@@ -133,12 +232,12 @@ export default function NexusframerHome() {
       </div>
 
       {/* ABOUT */}
-      <section id="about" style={{ padding: "100px 24px", maxWidth: 1280, margin: "0 auto" }}>
+      <section id="about" className="py-10 lg:py-20 px-4"style={{  maxWidth: 1280, margin: "0 auto" }}>
         <AnimatedSection>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 64, alignItems: "center" }}>
             <div>
               <div className="font-body" style={{ color: colors.red, fontSize: 12, fontWeight: 700, letterSpacing: "3px", textTransform: "uppercase", marginBottom: 16 }}>Who We Are</div>
-              <h2 className="font-display" style={{ fontSize: "clamp(34px, 4vw, 52px)", fontWeight: 900, color: colors.maroon, lineHeight: 1.1, marginBottom: 24, letterSpacing: "-1px" }}>
+              <h2 className="font-display" style={{ fontSize: "clamp(32px, 4vw, 50px)", fontWeight: 900, color: colors.maroon, lineHeight: 1.1, marginBottom: 24, letterSpacing: "-1px" }}>
                 When People Grow,<br />
                 <span style={{ color: colors.green }}>Organizations Grow.</span>
               </h2>
@@ -151,7 +250,7 @@ export default function NexusframerHome() {
               </p>
             </div>
 
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
+            <div className="-mt-10 md:mt-10" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
               {[
                 { icon: "🔬", title: "Research-Backed", color: colors.red },
                 { icon: "🧬", title: "Psychology-Led", color: colors.orange },
@@ -168,8 +267,10 @@ export default function NexusframerHome() {
         </AnimatedSection>
       </section>
 
+      <NexusSection/>
+
       {/* VISION & MISSION */}
-      <section style={{ background: "#f5f0e8", padding: "80px 24px" }}>
+      <section style={{ background: "#f5f0e8", padding: "60px 24px" }}>
         <div style={{ maxWidth: 1280, margin: "0 auto" }}>
           <AnimatedSection>
             <div style={{ textAlign: "center", marginBottom: 60 }}>
@@ -206,8 +307,114 @@ export default function NexusframerHome() {
         </div>
       </section>
 
+      {/* ── JOURNEY TIMELINE ── */}
+      <section style={{
+        padding: "clamp(60px, 10vw, 100px) clamp(20px, 8vw, 120px)",
+        background: colors.white,
+        position: "relative",
+        overflow: "hidden",
+      }}>
+        <FadeUp>
+          <div style={{ textAlign: "center", marginBottom: "clamp(40px, 6vw, 64px)" }}>
+            <h2 style={{
+              fontFamily: "'Bebas Neue', 'Impact', sans-serif",
+              fontSize: "clamp(2rem, 5vw, 3.5rem)",
+              letterSpacing: "3px",
+              color: colors.textDark,
+            }}>
+              Our <span style={{ color: colors.red }}>Methodology</span>
+            </h2>
+            <p style={{ color: colors.textLight, maxWidth: "480px", margin: "12px auto 0", lineHeight: 1.7, fontSize: "clamp(0.85rem, 1.5vw, 1rem)" }}>
+              A continuous learning path that grows with every individual.
+            </p>
+          </div>
+        </FadeUp>
+
+        {/* Timeline */}
+        <div style={{
+          maxWidth: "900px",
+          margin: "0 auto",
+          position: "relative",
+        }}>
+          {/* Center line (hidden on mobile via opacity trick) */}
+          <div style={{
+            position: "absolute",
+            left: "50%",
+            top: 0, bottom: 0,
+            width: "2px",
+            background: `linear-gradient(to bottom, ${colors.red}30, ${colors.orange}30, ${colors.yellow}30, ${colors.green}30, ${colors.maroon}30)`,
+            transform: "translateX(-50%)",
+          }} />
+
+          {segments.map((seg, i) => {
+            const isLeft = i % 2 === 0;
+            const [ref, inView] = useInView();
+            return (
+              <div
+                key={seg.id}
+                ref={ref}
+                style={{
+                  display: "flex",
+                  justifyContent: isLeft ? "flex-start" : "flex-end",
+                  marginBottom: "clamp(24px, 4vw, 40px)",
+                  position: "relative",
+                  opacity: inView ? 1 : 0,
+                  transform: inView ? "translateX(0)" : `translateX(${isLeft ? "-40px" : "40px"})`,
+                  transition: `opacity 0.7s ease ${i * 0.1}s, transform 0.7s ease ${i * 0.1}s`,
+                }}
+              >
+                {/* Center dot */}
+                <div style={{
+                  position: "absolute",
+                  left: "50%",
+                  top: "20px",
+                  transform: "translateX(-50%)",
+                  width: "14px",
+                  height: "14px",
+                  borderRadius: "50%",
+                  background: seg.color,
+                  border: `3px solid ${colors.white}`,
+                  boxShadow: `0 0 0 2px ${seg.color}`,
+                  zIndex: 1,
+                }} />
+
+                <div style={{
+                  width: "calc(50% - 30px)",
+                  background: colors.offWhite,
+                  border: `1px solid ${seg.color}25`,
+                  borderLeft: isLeft ? `3px solid ${seg.color}` : "1px solid #e8e8e8",
+                  borderRight: !isLeft ? `3px solid ${seg.color}` : "1px solid #e8e8e8",
+                  borderRadius: "2px",
+                  padding: "clamp(16px, 3vw, 24px)",
+                  boxShadow: "0 2px 10px rgba(0,0,0,0.04)",
+                }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "8px" }}>
+                    <span style={{ fontSize: "1.3rem" }}>{seg.icon}</span>
+                    <h3 style={{
+                      fontFamily: "'Bebas Neue', 'Impact', sans-serif",
+                      fontSize: "clamp(1rem, 2vw, 1.25rem)",
+                      color: seg.color,
+                      letterSpacing: "2px",
+                    }}>
+                      {seg.label}
+                    </h3>
+                  </div>
+                  <p style={{
+                    color: colors.textMid,
+                    fontSize: "clamp(0.78rem, 1.4vw, 0.875rem)",
+                    lineHeight: 1.7,
+                  }}>
+                    {seg.tagline}
+                  </p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
       {/* SERVICES */}
-      <section id="services" style={{ padding: "100px 24px", maxWidth: 1280, margin: "0 auto" }}>
+      <section id="services" style={{ padding: "60px 24px", maxWidth: 1280, margin: "0 auto" }}>
         <AnimatedSection>
           <div style={{ textAlign: "center", marginBottom: 64 }}>
             <div className="font-body" style={{ color: colors.red, fontSize: 12, fontWeight: 700, letterSpacing: "3px", textTransform: "uppercase", marginBottom: 12 }}>What We Do</div>
@@ -233,7 +440,7 @@ export default function NexusframerHome() {
       </section>
 
       {/* PROGRAMS */}
-      <section id="programs" style={{ background: colors.maroon, padding: "100px 24px" }}>
+      <section id="programs" style={{ background: colors.maroon, padding: "60px 24px" }}>
         <div style={{ maxWidth: 1280, margin: "0 auto" }}>
           <AnimatedSection>
             <div style={{ textAlign: "center", marginBottom: 60 }}>
@@ -262,7 +469,7 @@ export default function NexusframerHome() {
       </section>
 
       {/* TRAINER */}
-      <section id="trainers" style={{ padding: "100px 24px", maxWidth: 1280, margin: "0 auto" }}>
+      <section id="trainers" style={{ padding: "60px 24px", maxWidth: 1280, margin: "0 auto" }}>
         <AnimatedSection>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 64, alignItems: "center" }}>
             <div>
@@ -274,7 +481,7 @@ export default function NexusframerHome() {
                 An IT professional turned transformation expert, Sri Aalekhya Puja has trained 1,000+ professionals across industries. She specializes in executive presence, stress management, applied NLP, communication mastery, and leadership coaching.
               </p>
               <p className="font-body" style={{ fontSize: 15, color: colors.darkGreen, lineHeight: 1.75, marginBottom: 32 }}>
-                Her work blends structure, empathy, and measurable mindset shifts—recognized by Central & State Government bodies, IITs, IIM Bangalore, and UC Berkeley programs.
+                Her work blends structure, empathy, and measurable mindset shifts-recognized by Central & State Government bodies, IITs, IIM Bangalore, and UC Berkeley programs.
               </p>
               <div style={{ display: "flex", flexWrap: "wrap", gap: 12 }}>
                 {["NLP Certified", "IIM Bangalore", "UC Berkeley", "IIT Recognized"].map(tag => (
@@ -284,29 +491,16 @@ export default function NexusframerHome() {
             </div>
 
             <div style={{ position: "relative" }}>
-              <div style={{ background: `linear-gradient(135deg, ${colors.green}, ${colors.green})`, borderRadius: 20, padding: 40, color: "white" }}>
-                <div style={{ fontSize: 60, textAlign: "center", marginBottom: 16 }}>👩‍💼</div>
-                <div className="font-display" style={{ fontSize: 22, fontWeight: 700, textAlign: "center", marginBottom: 8 }}>Sri Aalekhya Puja</div>
-                <div className="font-body" style={{ fontSize: 13, color: "rgba(255,255,255,0.7)", textAlign: "center", marginBottom: 32 }}>Transformation Expert</div>
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
-                  {[["1000+", "Professionals"], ["10+", "Years Exp."], ["20+", "Industries"], ["5", "Specialties"]].map(([num, lbl]) => (
-                    <div key={lbl} style={{ textAlign: "center", background: "rgba(255,255,255,0.1)", borderRadius: 10, padding: "16px 8px" }}>
-                      <div className="font-display" style={{ fontSize: 28, fontWeight: 900, color: colors.yellow }}>{num}</div>
-                      <div className="font-body" style={{ fontSize: 12, color: "rgba(255,255,255,0.7)", marginTop: 4 }}>{lbl}</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
+              <img src="/sri-image2.jpeg" alt="Nexus framer" />
             </div>
           </div>
         </AnimatedSection>
       </section>
 
       {/* SOULHEAR */}
-      <section style={{ position: "relative", padding: "100px 24px", overflow: "hidden" }}>
+      <section style={{ position: "relative", padding: "60px 24px", overflow: "hidden" }}>
         <div className="soulhear-bg" style={{ position: "absolute", inset: 0 }} />
-        <div style={{ position: "absolute", top: "20%", right: "10%", width: 280, height: 280, borderRadius: "50%", border: "2px solid rgba(255,216,1,0.15)" }} />
-        <div style={{ position: "absolute", bottom: "15%", left: "5%", width: 160, height: 160, borderRadius: "50%", background: "rgba(255,216,1,0.05)" }} />
+      
         <div style={{ maxWidth: 800, margin: "0 auto", textAlign: "center", position: "relative", zIndex: 2 }}>
           <AnimatedSection>
             <div className="font-body" style={{ color: colors.yellow, fontSize: 12, fontWeight: 700, letterSpacing: "3px", textTransform: "uppercase", marginBottom: 16 }}>Premium Service</div>
@@ -316,10 +510,10 @@ export default function NexusframerHome() {
               Nexusframer's premium, high-touch emotional intelligence and inner leadership service—designed for leaders, founders, CXOs, and high-performing professionals. This is not a training program. It is a guided transformational experience.
             </p>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 20, marginBottom: 48 }}>
-              {["Emotional Clarity", "Calm Confidence", "Authentic Presence", "Deeper Connection"].map((item, i) => (
+              {Soulhear.map((item, i) => (
                 <div key={item} style={{ background: "rgba(255,255,255,0.08)", backdropFilter: "blur(10px)", borderRadius: 12, padding: "20px 16px", border: "1px solid rgba(255,216,1,0.2)" }}>
-                  <div style={{ fontSize: 24, marginBottom: 8 }}>{"🎯🧘✨🤝"[i]}</div>
-                  <div className="font-body" style={{ fontSize: 14, fontWeight: 600, color: "white" }}>{item}</div>
+                  <div style={{ fontSize: 36, marginBottom: 8 }}>{item.icon}</div>
+                  <div className="font-body" style={{ fontSize: 16, fontWeight: 600, color: "white" }}>{item.title}</div>
                 </div>
               ))}
             </div>
@@ -336,7 +530,7 @@ export default function NexusframerHome() {
       </section>
 
       {/* BOOKS */}
-      <section id="books" style={{ padding: "100px 24px", maxWidth: 1280, margin: "0 auto" }}>
+      <section id="books" style={{ padding: "60px 24px", maxWidth: 1280, margin: "0 auto" }}>
         <AnimatedSection>
           <div style={{ textAlign: "center", marginBottom: 60 }}>
             <div className="font-body" style={{ color: colors.red, fontSize: 12, fontWeight: 700, letterSpacing: "3px", textTransform: "uppercase", marginBottom: 12 }}>Thought Leadership</div>

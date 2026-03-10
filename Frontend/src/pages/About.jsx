@@ -204,14 +204,14 @@ export default function About() {
         <div style={{
           position: "absolute", top: 0, right: 0,
           width: "55%", height: "100%",
-          background: `linear-gradient(135deg, transparent 30%, ${COLORS.red}06 60%, ${COLORS.orange}08 100%)`,
+          background: `linear-gradient(135deg, transparent 40%, ${COLORS.red}06 60%, ${COLORS.orange}08 100%)`,
           clipPath: "polygon(20% 0, 100% 0, 100% 100%, 0% 100%)",
         }} />
         {/* Parallax bars */}
         {[COLORS.red, COLORS.orange, COLORS.yellow].map((c, i) => (
           <div key={i} style={{
             position: "absolute", right: `${10 + i * 6}%`, top: 0, bottom: 0,
-            width: "2px",
+            width: "4px",
             background: `linear-gradient(to bottom, transparent, ${c}40, transparent)`,
             transform: `translateY(${scrollY * (0.1 + i * 0.05)}px)`,
             opacity: 0.5,
@@ -224,13 +224,13 @@ export default function About() {
           fontSize: "clamp(6rem, 18vw, 18rem)",
           fontFamily: "'Bebas Neue', 'Impact', sans-serif",
           color: "transparent",
-          WebkitTextStroke: `1px ${COLORS.red}14`,
+          WebkitTextStroke: `1px ${COLORS.red}30`,
           letterSpacing: "4px",
           userSelect: "none",
           lineHeight: 1,
           pointerEvents: "none",
         }}>
-          NEXUS
+          NEXUS <br /> FRAMER
         </div>
 
         <div style={{ position: "relative", maxWidth: "760px" }}>
@@ -264,8 +264,8 @@ export default function About() {
               background: `linear-gradient(90deg, ${COLORS.red}, ${COLORS.orange})`,
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
-            }}>NEXUS</span>
-            <span style={{ display: "block", color: COLORS.textDark }}>FRAMER</span>
+            }}>NEXUS FRAMER</span>
+           
           </h1>
 
           <p style={{
@@ -277,7 +277,7 @@ export default function About() {
             marginBottom: "44px",
             animation: "fadeUp 0.9s ease 0.3s both",
           }}>
-            A global training enterprise focused on skill development across every stage of life — empowering individuals and institutions to unlock their full potential.
+            A global training enterprise focused on skill development across every stage of life - empowering individuals and institutions to unlock their full potential.
           </p>
 
           <div style={{
@@ -666,7 +666,7 @@ export default function About() {
 
       {/* ── CTA STRIP ── */}
       <section style={{
-        padding: "clamp(60px, 8vw, 100px) clamp(20px, 8vw, 120px)",
+        padding: "60px",
         background: `linear-gradient(135deg, ${COLORS.maroon}, ${COLORS.red} 50%, ${COLORS.orange})`,
         position: "relative",
         overflow: "hidden",
