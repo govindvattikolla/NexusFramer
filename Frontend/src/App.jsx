@@ -11,7 +11,8 @@ import Programs from "./pages/Programs"
 import Services from "./pages/Services"
 import Footer from "./components/Footer"
 import Whoweserve from "./pages/Whoweserve"
-
+import Founder from "./pages/Founder"
+import Partner from "./pages/Partner"
 export default function App() {
   return (
     <>
@@ -25,6 +26,8 @@ export default function App() {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/industriesserved" element={<IndustriesServed />} />
         <Route path="/programs" element={<Programs />} />
+        <Route path="/founder" element={<Founder/>}/>
+        <Route path="/partner" element={<Partner/>}/>
         <Route path="/services" element={<Services />} />
       </Routes>
       <Footer/>

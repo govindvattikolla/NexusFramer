@@ -355,10 +355,10 @@ export default function Whoweserve() {
         overflow: "hidden",
       }}>
         {/* Top rainbow bar */}
-        <div style={{
+        {/* <div style={{
           position: "absolute", top: 0, left: 0, right: 0, height: "4px",
           background: `linear-gradient(90deg, ${COLORS.red} 0%, ${COLORS.orange} 25%, ${COLORS.yellow} 50%, ${COLORS.green} 75%, ${COLORS.maroon} 100%)`,
-        }} />
+        }} /> */}
 
         {/* BG ghost text */}
         <div style={{
