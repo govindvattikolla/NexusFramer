@@ -50,10 +50,10 @@ export default function NexusSection() {
           <p className="dm-sans text-[#DE080A] text-[14px] font-medium tracking-[4px] uppercase mb-3">
             The Problem We Solve
           </p>
-          <h2 className="playfair font-bold text-green-900 leading-tight mb-5"
+          <h2 className="playfair font-bold  text-green-900 leading-tight mb-5"
             style={{ fontSize: "clamp(28px,4vw,48px)" }}>
-            Success evolves.{" "}
-            <em className="text-green-900">Skills don't.</em>
+            Success evolves Skills don't.{" "}
+            
           </h2>
           <div className="w-12 h-[3px] bg-[#DE080A] mb-10" />
 
@@ -71,7 +71,7 @@ export default function NexusSection() {
                   <p className="dm-sans text-[#DE080A] text-[14px] font-medium tracking-[2px] uppercase mb-1">
                     {p.label}
                   </p>
-                  <p className="dm-sans text-[#444444] text-[16px] leading-snug">{p.text}</p>
+                  <p className="dm-sans text-Colors.darkgreen text-[16px] leading-snug">{p.text}</p>
                 </div>
               </div>
             ))}
@@ -99,26 +99,26 @@ export default function NexusSection() {
       {/* ── BRIDGES ── */}
       <div className="bg-white px-6 py-10 md:py-14" ref={bridgeRef}>
         <div className="max-w-6xl mx-auto">
-          <p className="dm-sans text-[#006400] text-[14px] font-medium tracking-[4px] uppercase mb-3">
+          <p className="dm-sans text-red-800 text-[14px] font-medium tracking-[4px] uppercase mb-3">
             What We Do
           </p>
-          <h2 className="playfair font-bold text-[#1A1A1A] leading-tight mb-5"
+          <h2 className="playfair font-bold text-green-900 leading-tight mb-5"
             style={{ fontSize: "clamp(28px,4vw,48px)" }}>
-            We build <em className="text-[#006400]">bridges.</em>
+            We build bridges.
           </h2>
           <div className="w-12 h-[3px] bg-[#006400] mb-10" />
 
           {/* Intro grid */}
           <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <p className="dm-sans text-[#444444] font-light text-[16px] leading-relaxed">
+            <p className="dm-sans text-Colors.darkgreen font-light text-[16px] leading-relaxed">
               Nexus Framer bridges the gap between education, industry, and real-world performance -
               supporting you through every transition, transformation, and growth challenge.
             </p>
             <div className="bg-[#F6F6F6] border-l-4 border-l-[#006400] px-6 py-5">
-              <strong className="dm-sans text-[#1a4a1a] text-[14px] font-medium tracking-[2px] uppercase block mb-2">
+              <strong className="dm-sans text-red-900 text-[14px] font-medium tracking-[2px] uppercase block mb-2">
                 Our Mission
               </strong>
-              <p className="dm-sans text-[#1A1A1A] text-[15px] leading-relaxed">
+              <p className="dm-sans text-Colors.darkgreen text-[15px] leading-relaxed">
                 Align skills with opportunity - so that talent never goes to waste at any stage of life or career.
               </p>
             </div>
@@ -133,12 +133,12 @@ export default function NexusSection() {
                   ${bridgeInView ? "slide-in" : "opacity-0"}`}
                 style={{ animationDelay: `${i * 120}ms` }}
               >
-                <p className="dm-sans text-[#666666] text-[10px] font-medium tracking-[3px] uppercase mb-3">
+                <p className="dm-sans text-Colors.drakgreen text-[10px] font-medium tracking-[3px] uppercase mb-3">
                   {b.from}
                 </p>
                 <div className="flex items-center gap-2">
                   <span className={`text-xl font-bold ${b.arrow}`}>→</span>
-                  <span className="playfair font-bold text-[#1A1A1A] text-[18px]">{b.to}</span>
+                  <span className="playfair font-bold text-red-900 text-[18px]">{b.to}</span>
                 </div>
               </div>
             ))}

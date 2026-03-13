@@ -354,24 +354,20 @@ export default function Partner() {
         position: "relative",
         overflow: "hidden",
       }}>
-        {/* Rainbow top bar */}
-        {/* <div style={{
-          position: "absolute", top: 0, left: 0, right: 0, height: "4px",
-          background: `linear-gradient(90deg, ${COLORS.red} 0%, ${COLORS.orange} 33%, ${COLORS.yellow} 55%, ${COLORS.green} 77%, ${COLORS.maroon} 100%)`,
-        }} /> */}
+      
 
         {/* Ghost text */}
-        <div style={{
-          position: "absolute", right: "-20px", top: "50%",
+        <div className="hidden md:block" style={{
+          position: "absolute", right: "20px", top: "50%",
           transform: "translateY(-50%) rotate(-6deg)",
           fontFamily: "'Bebas Neue', 'Impact', sans-serif",
           fontSize: "clamp(3.5rem, 12vw, 11rem)",
           color: "transparent",
-          WebkitTextStroke: `1px ${COLORS.red}10`,
+          WebkitTextStroke: `1px ${COLORS.red}60`,
           userSelect: "none", pointerEvents: "none",
           lineHeight: 1, letterSpacing: "4px", whiteSpace: "nowrap",
         }}>
-          PARTNER
+          JOIN <br /> WITH US
         </div>
 
         {/* Decorative circles */}

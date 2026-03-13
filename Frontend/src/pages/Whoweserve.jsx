@@ -199,7 +199,7 @@ const SegmentCard = ({ seg, index }) => {
         </div>
         <div>
           <div style={{
-            fontFamily: "'Courier New', monospace",
+           
             fontSize: "0.65rem",
             color: seg.color,
             letterSpacing: "3px",
@@ -209,8 +209,9 @@ const SegmentCard = ({ seg, index }) => {
             {seg.tagline}
           </div>
           <h3 style={{
-            fontFamily: "'Bebas Neue', 'Impact', sans-serif",
+            
             fontSize: "clamp(1.2rem, 2.5vw, 1.6rem)",
+         
             color: COLORS.textDark,
             letterSpacing: "2px",
             lineHeight: 1,
@@ -233,7 +234,7 @@ const SegmentCard = ({ seg, index }) => {
       {/* Description */}
       <p style={{
         color: COLORS.textMid,
-        fontSize: "clamp(0.85rem, 1.5vw, 0.95rem)",
+        fontSize: "16px",
         lineHeight: 1.8,
         marginBottom: "20px",
         position: "relative",
@@ -261,11 +262,13 @@ const SegmentCard = ({ seg, index }) => {
           {seg.stat}
         </div>
         <div style={{
-          fontFamily: "'Courier New', monospace",
-          fontSize: "0.7rem",
+          fontWeight:"400",
+          fontSize: "0.8rem",
           color: COLORS.textLight,
-          textTransform: "uppercase",
-          letterSpacing: "2px",
+          fontWeight: "600",
+          textTransform:"uppercase",
+          
+          letterSpacing: "1px",
         }}>
           {seg.statLabel}
         </div>
@@ -275,15 +278,16 @@ const SegmentCard = ({ seg, index }) => {
       <div style={{ display: "flex", flexWrap: "wrap", gap: "6px" }}>
         {seg.tags.map((tag) => (
           <span key={tag} style={{
-            padding: "4px 10px",
+            padding: "3px 8px",
             background: seg.color + "10",
             border: `1px solid ${seg.color}25`,
-            borderRadius: "1px",
-            fontFamily: "'Courier New', monospace",
-            fontSize: "0.65rem",
+            borderRadius: "25px",
+            
+            fontSize: "0.8rem",
+            fontWeight:"500",
             color: seg.color === COLORS.yellow ? "#7a6000" : seg.color,
             letterSpacing: "1px",
-            textTransform: "uppercase",
+            
           }}>
             {tag}
           </span>
@@ -348,148 +352,199 @@ export default function Whoweserve() {
     }}>
 
       {/* ── HERO ── */}
-      <section style={{
+    <section
+      style={{
         background: COLORS.white,
-        padding: "clamp(80px, 12vw, 130px) clamp(20px, 8vw, 120px) clamp(60px, 8vw, 100px)",
+        padding:
+          "clamp(40px, 6vw, 80px) clamp(20px, 8vw, 120px) clamp(60px, 8vw, 100px)",
         position: "relative",
         overflow: "hidden",
-      }}>
-        {/* Top rainbow bar */}
-        {/* <div style={{
-          position: "absolute", top: 0, left: 0, right: 0, height: "4px",
-          background: `linear-gradient(90deg, ${COLORS.red} 0%, ${COLORS.orange} 25%, ${COLORS.yellow} 50%, ${COLORS.green} 75%, ${COLORS.maroon} 100%)`,
-        }} /> */}
+      }}
+    >
+ 
+  <div
+    style={{
+      position: "absolute",
+      bottom: "-30px",
+      left: "-30px",
+      width: "140px",
+      height: "140px",
+      borderRadius: "50%",
+      border: `1px solid ${COLORS.red}15`,
+      pointerEvents: "none",
+    }}
+  />
 
-        {/* BG ghost text */}
-        <div style={{
-          position: "absolute", right: "-40px", top: "50%",
-          transform: "translateY(-50%) rotate(-6deg)",
-          fontFamily: "'Bebas Neue', 'Impact', sans-serif",
-          fontSize: "clamp(5rem, 16vw, 14rem)",
-          color: "transparent",
-          WebkitTextStroke: `1px ${COLORS.red}10`,
-          userSelect: "none", pointerEvents: "none",
-          lineHeight: 1, letterSpacing: "4px",
-          whiteSpace: "nowrap",
-        }}>
-          SERVE
+  {/* MAIN GRID */}
+  <div className="grid md:grid-cols-2 gap-12 items-center">
+
+    {/* LEFT COLUMN  */}
+    <div style={{ maxWidth: "860px", position: "relative" }}>
+      
+      <FadeUp>
+        <div
+          style={{
+            display: "inline-flex",
+            alignItems: "center",
+            gap: "10px",
+            marginBottom: "20px",
+          }}
+        >
+          <div
+            style={{ width: "32px", height: "2px", background: COLORS.red }}
+          />
+          <span
+            style={{
+              fontFamily: "'Courier New', monospace",
+              fontSize: "clamp(0.65rem, 1.4vw, 0.78rem)",
+              color: COLORS.red,
+              letterSpacing: "4px",
+              textTransform: "uppercase",
+            }}
+          >
+            Our Reach
+          </span>
         </div>
+      </FadeUp>
 
-        {/* Decorative circles */}
-        <div style={{
-          position: "absolute", bottom: "-60px", left: "-60px",
-          width: "240px", height: "240px", borderRadius: "50%",
-          border: `1px solid ${COLORS.orange}15`,
-          pointerEvents: "none",
-        }} />
-        <div style={{
-          position: "absolute", bottom: "-30px", left: "-30px",
-          width: "140px", height: "140px", borderRadius: "50%",
-          border: `1px solid ${COLORS.red}15`,
-          pointerEvents: "none",
-        }} />
+      <FadeUp delay={0.1}>
+        <h1
+          style={{
+            fontFamily: "'Bebas Neue', 'Impact', sans-serif",
+            fontSize: "clamp(3rem, 9vw, 7rem)",
+            lineHeight: 0.92,
+            letterSpacing: "3px",
+            marginBottom: "0",
+          }}
+        >
+          <span style={{ display: "block", color: COLORS.textDark }}>
+            WHO WE
+          </span>
+          <span
+            style={{
+              display: "block",
+              background: `linear-gradient(90deg, ${COLORS.red}, ${COLORS.orange})`,
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+            }}
+          >
+            SERVE
+          </span>
+        </h1>
+      </FadeUp>
 
-        <div style={{ maxWidth: "860px", position: "relative" }}>
-          <FadeUp>
-            <div style={{
-              display: "inline-flex", alignItems: "center", gap: "10px",
-              marginBottom: "20px",
-            }}>
-              <div style={{ width: "32px", height: "2px", background: COLORS.red }} />
-              <span style={{
-                fontFamily: "'Courier New', monospace",
-                fontSize: "clamp(0.65rem, 1.4vw, 0.78rem)",
-                color: COLORS.red,
-                letterSpacing: "4px",
-                textTransform: "uppercase",
-              }}>
-                Our Reach
-              </span>
-            </div>
-          </FadeUp>
+      <FadeUp delay={0.2}>
+        <p
+          style={{
+            marginTop: "28px",
+            fontSize: "clamp(0.95rem, 1.9vw, 1.15rem)",
+            lineHeight: 1.85,
+            color: COLORS.textMid,
+            maxWidth: "600px",
+          }}
+        >
+          From classrooms to boardrooms, Nexus Framer equips every kind of
+          learner and leader with the skills they need to thrive in a
+          fast-changing world.
+        </p>
+      </FadeUp>
 
-          <FadeUp delay={0.1}>
-            <h1 style={{
-              fontFamily: "'Bebas Neue', 'Impact', sans-serif",
-              fontSize: "clamp(3rem, 9vw, 7rem)",
-              lineHeight: 0.92,
-              letterSpacing: "3px",
-              marginBottom: "0",
-            }}>
-              <span style={{ display: "block", color: COLORS.textDark }}>WHO WE</span>
-              <span style={{
-                display: "block",
-                background: `linear-gradient(90deg, ${COLORS.red}, ${COLORS.orange})`,
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-              }}>SERVE</span>
-            </h1>
-          </FadeUp>
+      {/* Stats */}
+      <FadeUp delay={0.35}>
+        <div
+          style={{
+            marginTop: "48px",
+            display: "flex",
+            gap: "10px",
+            flexWrap: "wrap",
+            alignItems: "center",
+          }}
+        >
+          {[
+            { value: "5+", label: "Segments Served", color: COLORS.red },
+            { value: "10K+", label: "Lives Impacted", color: COLORS.orange },
+            { value: "200+", label: "Institutions", color: COLORS.green },
+          ].map((s, i) => (
+            <div
+              key={i}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: i !== 0 ? "30px" : "0",
+              }}
+            >
+              {i !== 0 && (
+                <div
+                  style={{
+                    width: "1px",
+                    height: "40px",
+                    background: "#ddd",
+                    marginRight: "clamp(20px, 5vw, 48px)",
+                  }}
+                />
+              )}
 
-          <FadeUp delay={0.2}>
-            <p style={{
-              marginTop: "28px",
-              fontSize: "clamp(0.95rem, 1.9vw, 1.15rem)",
-              lineHeight: 1.85,
-              color: COLORS.textMid,
-              maxWidth: "600px",
-            }}>
-              From classrooms to boardrooms, Nexus Framer equips every kind of learner and leader with the skills they need to thrive in a fast-changing world.
-            </p>
-          </FadeUp>
-
-          {/* Hero stats row */}
-          <FadeUp delay={0.35}>
-            <div style={{
-              marginTop: "48px",
-              display: "flex",
-              gap: "clamp(20px, 5vw, 48px)",
-              flexWrap: "wrap",
-              alignItems: "center",
-            }}>
-              {[
-                { value: "5+", label: "Segments Served", color: COLORS.red },
-                { value: "10K+", label: "Lives Impacted", color: COLORS.orange },
-                { value: "200+", label: "Institutions", color: COLORS.green },
-              ].map((s, i) => (
-                <div key={i} style={{ display: "flex", alignItems: "center", gap: i !== 0 ? "clamp(20px, 5vw, 48px)" : "0" }}>
-                  {i !== 0 && (
-                    <div style={{ width: "1px", height: "40px", background: "#ddd", marginRight: "clamp(20px, 5vw, 48px)" }} />
-                  )}
-                  <div>
-                    <div style={{
-                      fontFamily: "'Bebas Neue', 'Impact', sans-serif",
-                      fontSize: "clamp(1.8rem, 4vw, 2.8rem)",
-                      color: s.color,
-                      lineHeight: 1,
-                      letterSpacing: "2px",
-                    }}>
-                      {s.value}
-                    </div>
-                    <div style={{
-                      fontFamily: "'Courier New', monospace",
-                      fontSize: "0.65rem",
-                      color: COLORS.textLight,
-                      textTransform: "uppercase",
-                      letterSpacing: "2px",
-                      marginTop: "3px",
-                    }}>
-                      {s.label}
-                    </div>
-                  </div>
+              <div>
+                <div
+                  style={{
+                    fontFamily: "'Bebas Neue', 'Impact', sans-serif",
+                    fontSize: "clamp(1.8rem, 4vw, 2.8rem)",
+                    color: s.color,
+                    lineHeight: 1,
+                    letterSpacing: "2px",
+                  }}
+                >
+                  {s.value}
                 </div>
-              ))}
+
+                <div
+                  style={{
+                    fontFamily: "'monospace'",
+                    fontSize: "0.65rem",
+                    fontWeight:500,
+                    color: COLORS.textLight,
+                    textTransform: "uppercase",
+                    letterSpacing: "2px",
+                    marginTop: "3px",
+                  }}
+                >
+                  {s.label}
+                </div>
+              </div>
             </div>
-          </FadeUp>
+          ))}
         </div>
-      </section>
+      </FadeUp>
+    </div>
+
+    {/* RIGHT COLUMN — IMAGE GRID */}
+    <div className="grid grid-cols-2 gap-4">
+      <img
+        src="/collegeProgram.jpeg"
+        className="rounded-xl object-cover w-full h-52"
+      />
+      <img
+        src="/SchoolPrgogram.jpeg"
+        className="rounded-xl object-cover w-full h-52"
+      />
+      <img
+        src="/schoolProgram.jpeg"
+        className="rounded-xl object-cover w-full h-52"
+      />
+      <img
+        src="/corporate2.jpeg"
+        className="rounded-xl object-cover w-full h-52"
+      />
+    </div>
+  </div>
+</section>
 
       {/* ── SEGMENT TABS (desktop quick-nav) ── */}
       <section style={{
         background: COLORS.offWhite,
         borderTop: "1px solid #ebebeb",
         borderBottom: "1px solid #ebebeb",
-        padding: "0 clamp(20px, 8vw, 120px)",
+        padding: "0 clamp(20px, 8vw, 100px)",
         overflowX: "auto",
       }}>
         <div style={{
@@ -542,7 +597,7 @@ export default function Whoweserve() {
 
       {/* ── SEGMENTS GRID ── */}
       <section style={{
-        padding: "clamp(60px, 10vw, 100px) clamp(20px, 8vw, 120px)",
+        padding: "clamp(40px, 8vw, 80px) clamp(20px, 8vw, 120px)",
         background: COLORS.white,
       }}>
         <div style={{
@@ -577,7 +632,8 @@ export default function Whoweserve() {
           <div style={{ textAlign: "center", marginBottom: "clamp(40px, 6vw, 64px)" }}>
             <div style={{
               fontFamily: "'Courier New', monospace",
-              fontSize: "0.72rem",
+              fontSize: "0.8rem",
+              fontWeight: "600",
               color: COLORS.orange,
               letterSpacing: "4px",
               textTransform: "uppercase",

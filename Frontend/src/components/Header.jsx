@@ -48,7 +48,7 @@ const Header = () => {
                 {/* Online Programs */}
                 <div>
                    <ul className="space-y-2">
-                    <li><Link to="/programs/digital-marketing" className="dropdown-item">Online programs</Link></li>
+                    <li><Link to="/programs/online" className="dropdown-item">Online programs</Link></li>
                     </ul>
 
                  
@@ -56,7 +56,7 @@ const Header = () => {
 
                 {/* Offline Programs */}
                 <div>
-                  <h3 className="font-semibold text-[#DE080A] mb-3">
+                  <h3 className="text-md text-[#DE080A] mb-3">
                     Offline Programs
                   </h3>
 

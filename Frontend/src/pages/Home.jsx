@@ -8,12 +8,12 @@ const colors = {
   green: "#006400",
   orange: "#FF6700",
   maroon: "#870000",
-  darkGreen: "#1a4a1a",
-  black: "#000",
+  darkGreen: "#024202",
+  black: "#064219",
   white : "#FFF",
   offWhite: "#F6F6F6",
-  textDark: "#1A1A1A",
-  textMid: "#444444",
+  textDark: "#074708",
+  textMid: "#074522",
   textLight: "#666666",
 };
 
@@ -324,7 +324,7 @@ const FadeLeft = ({ children, delay = 0 }) => {
             }}>
               Our <span style={{ color: colors.red }}>Methodology</span>
             </h2>
-            <p style={{ color: colors.textLight, maxWidth: "480px", margin: "12px auto 0", lineHeight: 1.7, fontSize: "clamp(0.85rem, 1.5vw, 1rem)" }}>
+            <p style={{ color: colors.darkgreen, maxWidth: "480px", margin: "12px auto 0", lineHeight: 1.7, fontSize: "clamp(0.85rem, 1.5vw, 1rem)" }}>
               A continuous learning path that grows with every individual.
             </p>
           </div>
@@ -400,7 +400,7 @@ const FadeLeft = ({ children, delay = 0 }) => {
                     </h3>
                   </div>
                   <p style={{
-                    color: colors.textMid,
+                    color: colors.darkgreen,
                     fontSize: "clamp(0.78rem, 1.4vw, 0.875rem)",
                     lineHeight: 1.7,
                   }}>
@@ -491,7 +491,7 @@ const FadeLeft = ({ children, delay = 0 }) => {
             </div>
 
             <div style={{ position: "relative" }}>
-              <img src="/sri-image2.jpeg" alt="Nexus framer" />
+              <img src="/sri-FounderImg.jpeg" alt="Nexus framer" width={530} />
             </div>
           </div>
         </AnimatedSection>

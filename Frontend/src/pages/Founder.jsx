@@ -113,8 +113,8 @@ const FounderPortrait = () => {
       {/* Decorative offset frame */}
       <div style={{
         position: "absolute",
-        top: "18px", left: "18px",
-        right: "-18px", bottom: "-18px",
+        top: "16px", left: "18px",
+        right: "-18px", bottom: "-16px",
         border: `2px solid ${COLORS.red}30`,
         borderRadius: "4px",
         transition: "all 0.4s ease",
@@ -137,7 +137,7 @@ const FounderPortrait = () => {
         overflow: "hidden",
         background: `linear-gradient(145deg, ${COLORS.red}12 0%, ${COLORS.orange}08 40%, ${COLORS.maroon}14 100%)`,
         backgroundColor: COLORS.offWhite,
-        aspectRatio: "3/4",
+        aspectRatio: "4/5",
         boxShadow: hovered
           ? `0 24px 60px ${COLORS.red}20`
           : "0 8px 32px rgba(0,0,0,0.1)",
@@ -168,95 +168,7 @@ const FounderPortrait = () => {
           borderRadius: "0 0 4px 0",
         }} />
 
-        {/* Center content */}
-        <div style={{
-          position: "absolute", inset: 0,
-          display: "flex", flexDirection: "column",
-          alignItems: "center", justifyContent: "center",
-          padding: "32px",
-        }}>
-          {/* Avatar circle */}
-          <div style={{
-            width: "120px", height: "120px",
-            borderRadius: "50%",
-            background: `linear-gradient(135deg, ${COLORS.red}20, ${COLORS.orange}15)`,
-            border: `3px solid ${COLORS.red}30`,
-            display: "flex", alignItems: "center", justifyContent: "center",
-            fontSize: "3.5rem",
-            marginBottom: "24px",
-            boxShadow: `0 8px 24px ${COLORS.red}15`,
-            transition: "transform 0.4s ease",
-            transform: hovered ? "scale(1.05)" : "scale(1)",
-          }}>
-            👩‍💼
-          </div>
-
-          <div style={{
-            fontFamily: "'Bebas Neue', 'Impact', sans-serif",
-            fontSize: "1.6rem",
-            color: COLORS.textDark,
-            letterSpacing: "3px",
-            textAlign: "center",
-            lineHeight: 1.1,
-            marginBottom: "6px",
-          }}>
-            SRI AALEKHYA PUJA
-          </div>
-
-          <div style={{
-            fontFamily: "'Courier New', monospace",
-            fontSize: "0.62rem",
-            color: COLORS.red,
-            letterSpacing: "3px",
-            textTransform: "uppercase",
-            textAlign: "center",
-            marginBottom: "20px",
-          }}>
-            Founder, Nexus Framer
-          </div>
-
-          {/* Role badges */}
-          <div style={{ display: "flex", flexWrap: "wrap", gap: "6px", justifyContent: "center" }}>
-            {["NLP Expert", "Leadership Coach", "Author"].map((r, i) => (
-              <span key={i} style={{
-                padding: "4px 10px",
-                background: [COLORS.red, COLORS.orange, COLORS.maroon][i] + "12",
-                border: `1px solid ${[COLORS.red, COLORS.orange, COLORS.maroon][i]}25`,
-                borderRadius: "1px",
-                fontFamily: "'Courier New', monospace",
-                fontSize: "0.58rem",
-                color: [COLORS.red, COLORS.orange, COLORS.maroon][i],
-                letterSpacing: "1px",
-                textTransform: "uppercase",
-              }}>
-                {r}
-              </span>
-            ))}
-          </div>
-        </div>
-
-        {/* Hover overlay */}
-        <div style={{
-          position: "absolute", inset: 0,
-          background: `linear-gradient(to top, ${COLORS.maroon}cc 0%, transparent 60%)`,
-          opacity: hovered ? 1 : 0,
-          transition: "opacity 0.4s ease",
-          display: "flex", alignItems: "flex-end",
-          padding: "24px",
-        }}>
-          <div style={{
-            fontFamily: "'Courier New', monospace",
-            fontSize: "0.7rem",
-            color: "rgba(255,255,255,0.85)",
-            letterSpacing: "1px",
-            lineHeight: 1.6,
-            transform: hovered ? "translateY(0)" : "translateY(12px)",
-            transition: "transform 0.4s ease",
-          }}>
-            "Empowering every individual to<br />
-            discover the leader within."
-          </div>
-        </div>
+       <img src="/sri-image2.jpeg" alt="Founder Image" sizes="" srcset="" className="mt-10" />
       </div>
 
       {/* Stat chips below portrait */}
@@ -336,17 +248,17 @@ export default function Founder() {
         }} /> */}
 
         {/* Ghost text */}
-        <div style={{
-          position: "absolute", right: "-20px", top: "50%",
+        <div className="hidden md:block" style={{
+          position: "absolute", right: "10px", top: "50%",
           transform: "translateY(-50%) rotate(-6deg)",
           fontFamily: "'Bebas Neue', 'Impact', sans-serif",
           fontSize: "clamp(4rem, 13vw, 12rem)",
           color: "transparent",
-          WebkitTextStroke: `1px ${COLORS.red}10`,
+          WebkitTextStroke: `1px ${COLORS.red}60`,
           userSelect: "none", pointerEvents: "none",
-          lineHeight: 1, letterSpacing: "4px", whiteSpace: "nowrap",
+          lineHeight: 1, letterSpacing: "2px", whiteSpace: "nowrap",
         }}>
-          FOUNDER
+          Our <br /> Founder
         </div>
 
         {/* Decorative circles */}
@@ -381,7 +293,7 @@ export default function Founder() {
               fontSize: "clamp(3rem, 9vw, 7rem)",
               lineHeight: 0.92, letterSpacing: "3px",
             }}>
-              <span style={{ display: "block", color: COLORS.textDark }}>THE</span>
+              
               <span style={{
                 display: "block",
                 background: `linear-gradient(90deg, ${COLORS.red}, ${COLORS.orange})`,
@@ -396,7 +308,7 @@ export default function Founder() {
               fontSize: "clamp(0.95rem, 1.9vw, 1.15rem)",
               lineHeight: 1.85, color: COLORS.textMid, maxWidth: "620px",
             }}>
-              Sri Aalekhya Puja — Charisma Empowerment Trainer, NLP Expert, Leadership Coach, and Author. The driving force behind Nexus Framer's mission to unlock potential at every level.
+              Sri Aalekhya Puja - Charisma Empowerment Trainer, NLP Expert, Leadership Coach, and Author. The driving force behind Nexus Framer's mission to unlock potential at every level.
             </p>
           </FadeUp>
 
@@ -537,21 +449,21 @@ export default function Founder() {
               <p style={{
                 color: COLORS.textMid,
                 fontSize: "clamp(0.9rem, 1.7vw, 1.05rem)",
-                lineHeight: 1.9, marginBottom: "20px",
+                lineHeight: 1.7, marginBottom: "20px",
               }}>
                 Sri Aalekhya Puja is the founder of Nexus Framer and one of India's most dynamic Charisma Empowerment Trainers. With a rare blend of NLP expertise, leadership coaching, and a gift for storytelling, she has spent over a decade transforming the way individuals show up — in boardrooms, classrooms, and every stage of life.
               </p>
               <p style={{
                 color: COLORS.textMid,
                 fontSize: "clamp(0.9rem, 1.7vw, 1.05rem)",
-                lineHeight: 1.9, marginBottom: "28px",
+                lineHeight: 1.7, marginBottom: "28px",
               }}>
                 She empowers individuals and teams to build unshakeable confidence, master communication, develop emotional intelligence, and cultivate the kind of leadership presence that commands attention and earns respect — without losing authenticity.
               </p>
               <p style={{
                 color: COLORS.textMid,
                 fontSize: "clamp(0.9rem, 1.7vw, 1.05rem)",
-                lineHeight: 1.9, marginBottom: "36px",
+                lineHeight: 1.7, marginBottom: "36px",
               }}>
                 Having trained over <strong style={{ color: COLORS.red }}>1000+ individuals</strong> across corporate, educational, and entrepreneurial ecosystems, Sri Aalekhya's impact stretches far beyond the training room — it lives in every career advanced, every team aligned, and every life redefined.
               </p>
@@ -569,7 +481,7 @@ export default function Founder() {
                   color: COLORS.textDark,
                   lineHeight: 1.7,
                 }}>
-                  "I don't just train people — I help them find the version of themselves they were always meant to be."
+                  "I don't just train people - I help them find the version of themselves they were always meant to be."
                 </p>
                 <div style={{
                   fontFamily: "'Courier New', monospace",
